@@ -1,9 +1,19 @@
 .Nominate .lander {
-    padding: 80px 0;
-    text-align: center;
+    padding: 10px 0;
   }
-  
+
   .Nominate .lander h1 {
     font-family: "Open Sans", sans-serif;
     font-weight: 600;
   }
+
+  .Nominate .lander h4 {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+  }
+
+  .Nominate .lander .jumbo {
+      padding-left: 5%;
+      padding-right: 5%;
+  }
+  
