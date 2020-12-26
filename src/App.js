@@ -12,7 +12,6 @@ import { onError } from "./libs/errorLib";
 function App() {
   const history = useHistory();
   const [isAuthenticated, userHasAuthenticated] = useState(false);
-  const [isAuthenticating, setIsAuthenticating] = useState(true);
 
   useEffect(() => {
     onLoad();
@@ -27,8 +26,6 @@ function App() {
         onError(e);
       }
     }
-
-    setIsAuthenticating(false);
   }
 
   async function handleLogout() {

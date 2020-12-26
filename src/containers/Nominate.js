@@ -1,8 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import "./Nominate.css";
 import { useFormFields } from "../libs/hooksLib";
-import LoaderButton from "../components/LoaderButton";
-import { API, Auth } from "aws-amplify";
+import { API } from "aws-amplify";
 import { onError } from "../libs/errorLib";
 import {
   Container,
@@ -22,14 +21,14 @@ export default function Nominate() {
   const searchRef = useRef(null);
   const [searchVal, setSearchVal] = useState(null);
   const [res, setRes] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
   const [getRes, setGetRes] = useState([]);
   const [fields, handleFieldChange] = useFormFields({
     search: "",
   });
 
   useEffect(() => {
-    onLoad();
+		onLoad();
+	// eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   async function onLoad() {
